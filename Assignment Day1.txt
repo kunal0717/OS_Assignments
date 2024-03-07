@@ -1,0 +1,180 @@
+Problem 1: Read the instructions carefully and answer accordingly. If there is
+any need to insert some data then do that as well.
+a) Navigate and List:
+a. Start by navigating to your home directory and list its contents. Then, move into a
+directory named "LinuxAssignment" if it exists; otherwise, create it.
+	Ans:a)	ls
+                mkdir LinuxAssignment
+                cd LinuxAssignment/
+
+
+
+b) File Management:
+a. Inside the "LinuxAssignment" directory, create a new file named "file1.txt". Display its
+contents.
+	Ans:b)  cat > file1.txt
+
+
+
+c) Directory Management:
+a. Create a new directory named "docs" inside the "LinuxAssignment" directory.
+	Ans:c)   mkdir docs
+
+
+d) Copy and Move Files:
+a. Copy the "file1.txt" file into the "docs" directory and rename it to "file2.txt".
+	Ans:d)    cp file1.txt docs/file2.txt
+    		  cat docs/file2.txt
+  		  mv file1.txt docs/file2.txt
+
+
+e) Permissions and Ownership:
+a. Change the permissions of "file2.txt" to allow read, write, and execute permissions for
+the owner and only read permissions for others. Then, change the owner of "file2.txt" to
+the current user.
+	Ans:e)  chmod 744 file2.txt
+ 		ls -l
+    		chown owner file2.txt
+   		ls -l
+
+f) Final Checklist:
+a. Finally, list the contents of the "LinuxAssignment" directory and the root directory to
+ensure that all operations were performed correctly.
+	Ans:f)   ls LinuxAssignment/
+  		 tree LinuxAssignment/
+    		 tree
+    		 cd /
+   		 ls
+   		 ls -l
+
+
+g) File Searching:
+a. Search for all files with the extension ".txt" in the current directory and its subdirectories.
+	Ans:g)   find *
+   		 find LinuxAssignment/ 744
+   		 ls LinuxAssignment/docs/file2.txt
+   		 ls LinuxAssignment/docs/file2.txt 744
+   		 ls LinuxAssignment/docs/ 744
+   		 cd LinuxAssignment/docs/
+b. Display lines containing a specific word in a file (provide a file name and the specific
+word to search).
+	Ans:g) b)  grep "1st" file2.txt
+  	   	   find *.txt
+   		   find * \.txt
+   		   find * .txt
+   		   find *.txt
+h) System Information:
+a. Display the current system date and time.
+	Ans:h) date
+
+
+
+i) Networking:
+a. Display the IP address of the system.
+	Ans:i)  ip a
+    		ping www.netflix.com
+    		hostname -l
+    		man hostname
+    		hostname -I
+    		ifconfig -a
+    		sudo apt install net-tools
+    		ifconfig -a
+    		ping www.google.com
+    		ping -c 2 www.google.com
+
+
+b. Ping a remote server to check connectivity (provide a remote server address to ping).
+	Ans:b)  ping www.google.com
+    		ping -c 2 www.google.com
+
+
+
+j) File Compression:
+a. Compress the "docs" directory into a zip file.
+	Ans:j)  bzip2 docs/
+    		sudo apt install bzip2
+    		bzip2 docs/
+    		bzip2 docs/*
+    		ls
+    		ls docs/
+    		bzcat docs/
+    		bzcat docs/file2.txt.bz2
+
+
+b. Extract the contents of the zip file into a new directory.
+	Ans:j) b)  tar cvf archieve.bz2 docs/
+docs/
+docs/file2.txt.bz2
+kunalphund@LAPTOP-U5EABLCJ:~/LinuxAssignment$ ls -l
+total 20
+drwxr-xr-x 2 kunalphund kunalphund  4096 Mar  7 18:58 ExtractedZipFile
+-rw-r--r-- 1 kunalphund kunalphund 10240 Mar  7 19:08 archieve.bz2
+drwxr-xr-x 2 kunalphund kunalphund  4096 Mar  7 19:00 docs
+kunalphund@LAPTOP-U5EABLCJ:~/LinuxAssignment$ ls
+ExtractedZipFile  archieve.bz2  docs
+kunalphund@LAPTOP-U5EABLCJ:~/LinuxAssignment$ cd
+kunalphund@LAPTOP-U5EABLCJ:~$ ls -l
+total 8
+drwxr-xr-x 4 kunalphund kunalphund 4096 Mar  7 19:08 LinuxAssignment
+drwx------ 3 kunalphund kunalphund 4096 Mar  3 22:08 snap
+kunalphund@LAPTOP-U5EABLCJ:~$ ls -l
+total 8
+drwxr-xr-x 4 kunalphund kunalphund 4096 Mar  7 19:08 LinuxAssignment
+drwx------ 3 kunalphund kunalphund 4096 Mar  3 22:08 snap
+kunalphund@LAPTOP-U5EABLCJ:~$ cd l
+-bash: cd: l: No such file or directory
+kunalphund@LAPTOP-U5EABLCJ:~$ cd l
+-bash: cd: l: No such file or directory
+kunalphund@LAPTOP-U5EABLCJ:~$ cd LinuxAssignment/
+kunalphund@LAPTOP-U5EABLCJ:~/LinuxAssignment$ ls -l
+total 20
+drwxr-xr-x 2 kunalphund kunalphund  4096 Mar  7 18:58 ExtractedZipFile
+-rw-r--r-- 1 kunalphund kunalphund 10240 Mar  7 19:08 archieve.bz2
+drwxr-xr-x 2 kunalphund kunalphund  4096 Mar  7 19:00 docs
+kunalphund@LAPTOP-U5EABLCJ:~/LinuxAssignment$ rm -r archieve.bz2
+kunalphund@LAPTOP-U5EABLCJ:~/LinuxAssignment$ ls
+ExtractedZipFile  docs
+kunalphund@LAPTOP-U5EABLCJ:~/LinuxAssignment$ tar -cvf archieve.tar.bz2 docs/
+docs/
+docs/file2.txt.bz2
+kunalphund@LAPTOP-U5EABLCJ:~/LinuxAssignment$ ls
+ExtractedZipFile  archieve.tar.bz2  docs
+kunalphund@LAPTOP-U5EABLCJ:~/LinuxAssignment$ tar -xvf archieve.tar.bz2 -C ExtractedZipFile/
+docs/
+docs/file2.txt.bz2
+kunalphund@LAPTOP-U5EABLCJ:~/LinuxAssignment$ cd ExtractedZipFile/
+kunalphund@LAPTOP-U5EABLCJ:~/LinuxAssignment/ExtractedZipFile$ ls
+docs  file1.txt
+kunalphund@LAPTOP-U5EABLCJ:~/LinuxAssignment/ExtractedZipFile$ ls docs/
+file2.txt.bz2
+kunalphund@LAPTOP-U5EABLCJ:~/LinuxAssignment/ExtractedZipFile$ cd ..
+kunalphund@LAPTOP-U5EABLCJ:~/LinuxAssignment$ ls
+ExtractedZipFile  archieve.tar.bz2  docs
+kunalphund@LAPTOP-U5EABLCJ:~/LinuxAssignment$ cd ExtractedZipFile/
+
+
+
+k) File Editing:
+a. Open the "file1.txt" file in a text editor and add some text to it.
+	Ans: k) a)   vi file1.txt
+kunalphund@LAPTOP-U5EABLCJ:~/LinuxAssignment/ExtractedZipFile$ cat file1.txt
+
+This will be changed in the text editor soon
+
+Inserting through vi editor.
+
+
+b. Replace a specific word in the "file1.txt" file with another word (provide the original
+word and the word to replace it with).
+	Ans :k) b) 
+kunalphund@LAPTOP-U5EABLCJ:~/LinuxAssignment/ExtractedZipFile$ sed 's/Inserting/Inserted/' file1.txt
+This will be changed in the text editor soon
+
+Inserted through vi editor.
+
+
+
+
+
+
+
