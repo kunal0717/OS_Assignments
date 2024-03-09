@@ -1,0 +1,57 @@
+ echo "Hello, World!"             [This command will print the text Hello, World!]
+ name="Productive"	            [This command stores the Productive in name variable]
+ touch file.txt	  	    [This command will create an empty file named as file.txt]
+ ls -a			  	    [This command gives us the listing with all the files present in our directory with the hidden file as well]
+ rm file.txt            	    [This command removes the file.txt from the directory]
+ cp file1.txt file2.txt 	    [This command copies the content of file1.txt to file2.txt]
+ mv file.txt /path/to/directory/   [This command will move the file.txt to the path of the directory specified by us]
+ chmod 755 script.sh		    [This command gives owner the permission of read, write and execute; the group and other users gets the permission of read and excute]
+ grep "pattern" file.txt	    [This command finds the string "pattern" in the file.txt if it matches a string in the file.txt then returns it as a output]
+ kill PID			    [This command is basically used to kill or terminate any process by providing the process Id]
+ mkdir mydir && cd mydir && touch file.txt && echo "Hello, World!" > file.txt && cat file.txt	     [This command will first make a directory with namwe mydir and then it will do inside the mydir and in that mydir it will create an empty file.txt and with the echo command it is storing the "Hellp, World" in the file.txt and atlast we will print the content of the file.txt]
+
+ ls -l | grep ".txt"        	    [This command will give us the files matching the .txt extension]
+ cat file1.txt file2.txt | sort | uniq			[This command will print the content of the file1.txt and file2.txt and will sort them alphabetically and will print the uniq from them]
+
+ ls -l | grep "^d"		    [This command will the list all the directories with their information]
+ grep -r "pattern" /path/to/directory/		    [This command will search for the matching string "pattern" if there is any file containing this string in it then it will return us the file name with its path that we have already mentioned]
+ cat file1.txt file2.txt | sort | uniq –d         [This command will sort the contents in the file1.txt and file2.txt and will sort them and will print the repeated contents in the file only for ones]
+
+ chmod 644 file.txt				    [This command will change the access of the file.txt to owner= read and write; group and others will have only read access to the file]
+ cp -r source_directory destination_directory	    [This command will copy the source directory to the destination directory and then the destination directory will content the copied dierctory into it]
+
+ find /path/to/search -name "*.txt"		    [This command will find on the specified path for the filename and having .txt as an extension]
+ chmod u+x file.txt				    [This command will give the owner for the execution access of file.txt]
+ echo $PATH					    [This command will give us the path to where wew can look for the executable files]
+
+
+
+
+
+
+
+Identify True or False:
+1. ls is used to list files and directories in a directory.
+	Ans: TRUE
+
+2. mv is used to move files and directories.
+	Ans: TRUE
+
+3. cd is used to copy files and directories.
+	Ans: FALSE
+
+4. pwd stands for "print working directory" and displays the current directory.
+	Ans: FALSE
+
+5. grep is used to search for patterns in files.
+	Ans: TRUE
+
+6. chmod 755 file.txt gives read, write, and execute permissions to the owner, and read and execute
+permissions to group and others.
+	Ans: TRUE
+
+7. mkdir -p directory1/directory2 creates nested directories, creating directory2 inside directory1 if directory1 does not exist.
+	Ans: TRUE
+
+8. rm -rf file.txt deletes a file forcefully without confirmation.
+	Ans: TRUE
